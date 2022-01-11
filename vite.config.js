@@ -13,10 +13,8 @@ export default defineConfig({
   build: {
     rollupOptions: {
       external: [
-        "firebase",
-        "@firebase",
-        /firebase.*/,
-        /@firebase.*/
+        /^@?firebase.*$/,
+        /^@?svelte.*$/
       ]
     },
     lib: {
